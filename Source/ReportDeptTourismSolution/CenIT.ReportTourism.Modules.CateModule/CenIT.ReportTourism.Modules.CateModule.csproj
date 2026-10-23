@@ -372,8 +372,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Cate\Views\Shared\" />
-    <Folder Include="Content\" />
-    <Folder Include="Scripts\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>

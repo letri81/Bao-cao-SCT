@@ -80,8 +80,6 @@
     <Procedure Name="Report_Dashboard_FilterOptions_IndustryScope" Value="p_Report_Dashboard_FilterOptions_IndustryScope" />
     <Procedure Name="Report_Dashboard_ProgressDetails_IndustryScope" Value="p_Report_Dashboard_ProgressDetails_IndustryScope" />
     <Procedure Name="Report_Dashboard_OverviewSummary_IndustryScope" Value="p_Report_Dashboard_OverviewSummary_IndustryScope" />
-  </StoredProcedures>
-
     <Procedure Name="Report_DataImports_OperationalScope" Value="p_Report_DataImports_OperationalScope" />
     <Procedure Name="Report_DataImports_Get_Operational" Value="p_Report_DataImports_Get_Operational" />
     <Procedure Name="Report_DataImports_GetDataImport_Operational" Value="p_Report_DataImports_GetDataImport_Operational" />
@@ -89,4 +87,5 @@
     <Procedure Name="Report_DataImports_GetForUserOnMonth_Operational" Value="p_Report_DataImports_GetForUserOnMonth_Operational" />
     <Procedure Name="Report_DataImports_Enterprises_SearchSelect2" Value="p_Report_DataImports_Enterprises_SearchSelect2" />
     <Procedure Name="Report_DataImports_CheckOwnership" Value="p_Report_DataImports_CheckOwnership" />
+  </StoredProcedures>
 </Provider>
