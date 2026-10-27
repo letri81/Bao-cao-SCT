@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="TitleTextbox">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>THEO DÕI SẢN LƯỢNG ĐIỆN 74 NHÀ MÁY ĐIỆN VÀ ĐIỆN MẶT TRỜI MÁI NHÀ</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.2in</Top>
+        <Left>0.5in</Left>
+        <Height>0.35in</Height>
+        <Width>12.6in</Width>
+        <Style>
+          <Border><Style>None</Style></Border>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="SubtitleTextbox">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Kỳ so sánh năm " &amp; CStr(CInt(Parameters!p_ReportYear.Value)-1) &amp; " và năm " &amp; Parameters!p_ReportYear.Value &amp; " (Lũy kế " &amp; Parameters!p_PeriodMonth.Value &amp; " tháng)"</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontStyle>Italic</FontStyle>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.55in</Top>
+        <Left>0.5in</Left>
+        <Height>0.25in</Height>
+        <Width>12.6in</Width>
+        <Style>
+          <Border><Style>None</Style></Border>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+      </Textbox>
+      <Tablix Name="TablixChung">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn><Width>0.6in</Width></TablixColumn>
+            <TablixColumn><Width>3.2in</Width></TablixColumn>
+            <TablixColumn><Width>1.1in</Width></TablixColumn>
+            <TablixColumn><Width>1.1in</Width></TablixColumn>
+            <TablixColumn><Width>1.8in</Width></TablixColumn>
+            <TablixColumn><Width>1.8in</Width></TablixColumn>
+            <TablixColumn><Width>1.8in</Width></TablixColumn>
+            <TablixColumn><Width>1.1in</Width></TablixColumn>
+            <TablixColumn><Width>1.1in</Width></TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <!-- Header Row 1 -->
+            <TablixRow>
+              <Height>0.35in</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="H_STT"><Paragraphs><Paragraph><TextRuns><TextRun><Value>STT</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_Plant"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tên nhà máy điện</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_CapTitle"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Công suất</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_CapTitle2"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Công suất</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_OutLast"><Paragraphs><Paragraph><TextRuns><TextRun><Value>="Thực tế năm " &amp; CStr(CInt(Parameters!p_ReportYear.Value)-1) &amp; " (kWh)"</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_OutCurr"><Paragraphs><Paragraph><TextRuns><TextRun><Value>="Thực tế năm " &amp; Parameters!p_ReportYear.Value &amp; " (kWh)"</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_Diff"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Sản lượng điện so với cùng kỳ (kWh)</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_Ratio"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tỷ lệ</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_Growth"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tăng/giảm</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <!-- Header Row 2 (Sub-headers for Capacity) -->
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="H2_STT"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H2_Plant"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H2_MWp"><Paragraphs><Paragraph><TextRuns><TextRun><Value>MWp</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H2_MW"><Paragraphs><Paragraph><TextRuns><TextRun><Value>MW</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H2_OutLast"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H2_OutCurr"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H2_Diff"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H2_Ratio"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H2_Growth"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <!-- Data Row -->
+            <TablixRow>
+              <Height>0.26in</Height>
+              <TablixCells>
+                <!-- Col 1: STT -->
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="D_STT">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!STT.Value</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>=SWITCH(Fields!RowType.Value = "GROUP", "Bold", Fields!ItemOrder.Value = 5, "Bold", Fields!ItemOrder.Value = 6, "Bold", Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "Bold", true, "Normal")</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Center</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#999999</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>=SWITCH(Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "#FFC000", Fields!ItemOrder.Value = 6, "#FFFF00", Fields!RowType.Value = "GROUP", "#F2F2F2", true, "#FFFFFF")</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <!-- Col 2: Title -->
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="D_Title">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Title.Value</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>=SWITCH(Fields!RowType.Value = "GROUP", "Bold", Fields!ItemOrder.Value = 5, "Bold", Fields!ItemOrder.Value = 6, "Bold", Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "Bold", true, "Normal")</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Left</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#999999</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>=SWITCH(Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "#FFC000", Fields!ItemOrder.Value = 6, "#FFFF00", Fields!RowType.Value = "GROUP", "#F2F2F2", true, "#FFFFFF")</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>=IIF(Fields!RowType.Value = "DETAIL", "14pt", "4pt")</PaddingLeft>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <!-- Col 3: CapacityMWp -->
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="D_CapMWp">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(Fields!CapacityMWp.Value &gt; 0, Format(Fields!CapacityMWp.Value, "#,##0.000"), "")</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>=SWITCH(Fields!RowType.Value = "GROUP", "Bold", Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "Bold", true, "Normal")</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Center</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#999999</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>=SWITCH(Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "#FFC000", Fields!ItemOrder.Value = 6, "#FFFF00", Fields!RowType.Value = "GROUP", "#F2F2F2", true, "#FFFFFF")</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <!-- Col 4: CapacityMW -->
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="D_CapMW">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(Fields!CapacityMW.Value &gt; 0, Format(Fields!CapacityMW.Value, "#,##0.000"), "")</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>=SWITCH(Fields!RowType.Value = "GROUP", "Bold", Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "Bold", true, "Normal")</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Center</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#999999</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>=SWITCH(Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "#FFC000", Fields!ItemOrder.Value = 6, "#FFFF00", Fields!RowType.Value = "GROUP", "#F2F2F2", true, "#FFFFFF")</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <!-- Col 5: OutputLastYear -->
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="D_OutLast">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(IsNothing(Fields!OutputLastYear.Value), "", Format(Fields!OutputLastYear.Value, "#,##0.0"))</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>=SWITCH(Fields!RowType.Value = "GROUP", "Bold", Fields!ItemOrder.Value = 5, "Bold", Fields!ItemOrder.Value = 6, "Bold", Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "Bold", true, "Normal")</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Right</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#999999</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>=SWITCH(Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "#FFC000", Fields!ItemOrder.Value = 6, "#FFFF00", Fields!RowType.Value = "GROUP", "#F2F2F2", true, "#FFFFFF")</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>4pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <!-- Col 6: OutputCurrentYear -->
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="D_OutCurr">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(IsNothing(Fields!OutputCurrentYear.Value), "", Format(Fields!OutputCurrentYear.Value, "#,##0.0"))</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>=SWITCH(Fields!RowType.Value = "GROUP", "Bold", Fields!ItemOrder.Value = 5, "Bold", Fields!ItemOrder.Value = 6, "Bold", Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "Bold", true, "Normal")</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Right</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#999999</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>=SWITCH(Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "#FFC000", Fields!ItemOrder.Value = 6, "#FFFF00", Fields!RowType.Value = "GROUP", "#F2F2F2", true, "#FFFFFF")</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>4pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <!-- Col 7: Difference -->
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="D_Diff">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(IsNothing(Fields!Difference.Value), "", Format(Fields!Difference.Value, "#,##0.0"))</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>=SWITCH(Fields!RowType.Value = "GROUP", "Bold", Fields!ItemOrder.Value = 5, "Bold", Fields!ItemOrder.Value = 6, "Bold", Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "Bold", true, "Normal")</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Right</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#999999</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>=SWITCH(Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "#FFC000", Fields!ItemOrder.Value = 6, "#FFFF00", Fields!RowType.Value = "GROUP", "#F2F2F2", true, "#FFFFFF")</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>4pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <!-- Col 8: RatioAchieved -->
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="D_Ratio">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(IsNothing(Fields!RatioAchieved.Value), "", Format(Fields!RatioAchieved.Value, "0.00%"))</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>=SWITCH(Fields!RowType.Value = "GROUP", "Bold", Fields!ItemOrder.Value = 5, "Bold", Fields!ItemOrder.Value = 6, "Bold", Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "Bold", true, "Normal")</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Right</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#999999</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>=SWITCH(Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "#FFC000", Fields!ItemOrder.Value = 6, "#FFFF00", Fields!RowType.Value = "GROUP", "#F2F2F2", true, "#FFFFFF")</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>4pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <!-- Col 9: RatioGrowth -->
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="D_Growth">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(IsNothing(Fields!RatioGrowth.Value), "", Format(Fields!RatioGrowth.Value, "0.00%"))</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>=SWITCH(Fields!RowType.Value = "GROUP", "Bold", Fields!ItemOrder.Value = 5, "Bold", Fields!ItemOrder.Value = 6, "Bold", Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "Bold", true, "Normal")</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Right</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#999999</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>=SWITCH(Fields!RowType.Value = "SUMMARY_YEAR" OR Fields!RowType.Value = "SUMMARY_PERIOD", "#FFC000", Fields!ItemOrder.Value = 6, "#FFFF00", Fields!RowType.Value = "GROUP", "#F2F2F2", true, "#FFFFFF")</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>4pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember><KeepWithGroup>After</KeepWithGroup></TablixMember>
+            <TablixMember><KeepWithGroup>After</KeepWithGroup></TablixMember>
+            <TablixMember><Group Name="Details" /></TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Data_SanLuongDien_Chung</DataSetName>
+        <Top>0.9in</Top>
+        <Left>0.5in</Left>
+        <Height>0.86in</Height>
+        <Width>12.6in</Width>
+      </Tablix>
+    </ReportItems>
+    <Height>2.0in</Height>
+  </Body>
+  <Width>13.6in</Width>
+  <Page>
+    <PageHeight>8.27in</PageHeight>
+    <PageWidth>14.0in</PageWidth>
+    <LeftMargin>0.2in</LeftMargin>
+    <RightMargin>0.2in</RightMargin>
+    <TopMargin>0.2in</TopMargin>
+    <BottomMargin>0.2in</BottomMargin>
+  </Page>
+  <DataSources>
+    <DataSource Name="ReportTourismDataSource">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>6831d167-e9a9-4b68-96c2-48817a5eb40f</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Data_SanLuongDien_Chung">
+      <Query>
+        <DataSourceName>ReportTourismDataSource</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="GroupOrder"><DataField>GroupOrder</DataField><rd:TypeName>System.Int32</rd:TypeName></Field>
+        <Field Name="ItemOrder"><DataField>ItemOrder</DataField><rd:TypeName>System.Int32</rd:TypeName></Field>
+        <Field Name="RowType"><DataField>RowType</DataField><rd:TypeName>System.String</rd:TypeName></Field>
+        <Field Name="STT"><DataField>STT</DataField><rd:TypeName>System.String</rd:TypeName></Field>
+        <Field Name="Title"><DataField>Title</DataField><rd:TypeName>System.String</rd:TypeName></Field>
+        <Field Name="CapacityMWp"><DataField>CapacityMWp</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="CapacityMW"><DataField>CapacityMW</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="OutputLastYear"><DataField>OutputLastYear</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="OutputCurrentYear"><DataField>OutputCurrentYear</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Difference"><DataField>Difference</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="RatioAchieved"><DataField>RatioAchieved</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="RatioGrowth"><DataField>RatioGrowth</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="p_ReportYear">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportYear</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="p_PeriodMonth">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PeriodMonth</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+</Report>
+

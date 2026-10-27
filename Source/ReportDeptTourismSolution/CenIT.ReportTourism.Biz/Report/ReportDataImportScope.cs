@@ -37,11 +37,11 @@ namespace CenIT.ReportTourism.Biz.Report
                     throw new HttpException(503, "Application and SQL report role configurations differ.");
                 var id = Convert.ToInt32(row["EnterpriseId"]);
                 if (!scope._ids.Add(id)) continue;
-                if (Convert.ToBoolean(row["CanManageAllRecords"])) scope._writeIds.Add(id);
+                if (row["CanManageAllRecords"] != DBNull.Value && Convert.ToBoolean(row["CanManageAllRecords"])) scope._writeIds.Add(id);
                 scope._enterprises.Add(new CateEnterpriseModel { EnterpriseId = id,
                     BusinessName = Convert.ToString(row["BusinessName"]), TaxCode = Convert.ToString(row["TaxCode"]),
                     TypeBusiness = Convert.ToString(row["TypeBusiness"]) });
-                scope.IsEnterpriseUser = Convert.ToBoolean(row["IsEnterpriseUser"]);
+                scope.IsEnterpriseUser = row["IsEnterpriseUser"] != DBNull.Value && Convert.ToBoolean(row["IsEnterpriseUser"]);
             }
             HttpContext.Current.Items[ContextKey] = scope;
             return scope;

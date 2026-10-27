@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="TitleTextbox">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="BÁO CÁO SẢN LƯỢNG ĐIỆN NĂM " &amp; Parameters!p_ReportYear.Value</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.2in</Top>
+        <Left>0.5in</Left>
+        <Height>0.35in</Height>
+        <Width>23.0in</Width>
+        <Style>
+          <Border><Style>None</Style></Border>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="SubtitleTextbox">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="(Kèm theo Công văn số ………/SCT-QLNL ngày ……/ ……/ " &amp; Parameters!p_ReportYear.Value &amp; " của Sở Công Thương)"</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontStyle>Italic</FontStyle>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.55in</Top>
+        <Left>0.5in</Left>
+        <Height>0.25in</Height>
+        <Width>23.0in</Width>
+        <Style>
+          <Border><Style>None</Style></Border>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+      </Textbox>
+      <Tablix Name="TablixReport">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn><Width>0.5in</Width></TablixColumn>
+            <TablixColumn><Width>2.2in</Width></TablixColumn>
+            <TablixColumn><Width>2.2in</Width></TablixColumn>
+            <TablixColumn><Width>1.8in</Width></TablixColumn>
+            <TablixColumn><Width>0.8in</Width></TablixColumn>
+            <TablixColumn><Width>0.8in</Width></TablixColumn>
+            <TablixColumn><Width>1.0in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>0.85in</Width></TablixColumn>
+            <TablixColumn><Width>1.1in</Width></TablixColumn>
+            <TablixColumn><Width>1.1in</Width></TablixColumn>
+            <TablixColumn><Width>1.1in</Width></TablixColumn>
+            <TablixColumn><Width>0.9in</Width></TablixColumn>
+            <TablixColumn><Width>0.9in</Width></TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <!-- Header Row -->
+            <TablixRow>
+              <Height>0.35in</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="H_STT"><Paragraphs><Paragraph><TextRuns><TextRun><Value>STT</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_PlantName"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tên nhà máy điện</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_CompanyName"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tên đơn vị</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_Address"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Địa chỉ</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_CapMWp"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Công suất MWp</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_CapMW"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Công suất MW</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_Plan"><Paragraphs><Paragraph><TextRuns><TextRun><Value>="Kế hoạch " &amp; Parameters!p_ReportYear.Value &amp; " (kWh)"</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M1"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 1</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M2"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 2</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M3"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 3</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M4"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 4</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M5"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 5</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M6"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 6</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M7"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 7</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M8"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 8</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M9"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 9</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M10"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 10</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M11"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 11</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_M12"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng 12</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_TotYear"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tổng cộng (kWh)</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_AccLast"><Paragraphs><Paragraph><TextRuns><TextRun><Value>="Tổng " &amp; Parameters!p_PeriodMonth.Value &amp; "T/" &amp; CStr(CInt(Parameters!p_ReportYear.Value)-1)</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_AccCurr"><Paragraphs><Paragraph><TextRuns><TextRun><Value>="Tổng " &amp; Parameters!p_PeriodMonth.Value &amp; "T/" &amp; Parameters!p_ReportYear.Value</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_Achieve"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tỷ lệ đạt (%)</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="H_Growth"><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tăng/giảm (%)</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#666666</Color><Style>Solid</Style></Border><BackgroundColor>#D9E2F3</BackgroundColor><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <!-- Group Header Row -->
+            <TablixRow>
+              <Height>0.3in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="GroupHeaderTextBox">
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!GroupName.Value</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style><TextAlign>Left</TextAlign></Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border><Color>#CCCCCC</Color><Style>Solid</Style></Border>
+                        <BackgroundColor>#F2F2F2</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>5pt</PaddingLeft>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH2"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH3"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH4"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH5"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH6"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH7"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH8"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH9"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH10"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH11"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH12"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH13"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH14"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH15"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH16"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH17"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH18"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH19"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH20"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH21"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH22"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH23"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="GH24"><Paragraphs><Paragraph><TextRuns><TextRun><Value /></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#CCCCCC</Color><Style>Solid</Style></Border><BackgroundColor>#F2F2F2</BackgroundColor></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <!-- Details Row -->
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="D_STT"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!STT.Value</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_Plant"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!PlantName.Value</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingLeft>2pt</PaddingLeft></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_Company"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!CompanyName.Value</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingLeft>2pt</PaddingLeft></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_Address"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!Address.Value</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingLeft>2pt</PaddingLeft></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_CapMWp"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!CapacityMWp.Value &gt; 0, Format(Fields!CapacityMWp.Value, "#,##0.00"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_CapMW"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!CapacityMW.Value &gt; 0, Format(Fields!CapacityMW.Value, "#,##0.00"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_Plan"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!PlanYear.Value &gt; 0, Format(Fields!PlanYear.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M1"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month1.Value &gt; 0, Format(Fields!Month1.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M2"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month2.Value &gt; 0, Format(Fields!Month2.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M3"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month3.Value &gt; 0, Format(Fields!Month3.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M4"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month4.Value &gt; 0, Format(Fields!Month4.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M5"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month5.Value &gt; 0, Format(Fields!Month5.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M6"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month6.Value &gt; 0, Format(Fields!Month6.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M7"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month7.Value &gt; 0, Format(Fields!Month7.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M8"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month8.Value &gt; 0, Format(Fields!Month8.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M9"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month9.Value &gt; 0, Format(Fields!Month9.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M10"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month10.Value &gt; 0, Format(Fields!Month10.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M11"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month11.Value &gt; 0, Format(Fields!Month11.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_M12"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!Month12.Value &gt; 0, Format(Fields!Month12.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_TotYear"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!TotalYear.Value &gt; 0, Format(Fields!TotalYear.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_AccLast"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!AccumulatedLastYear.Value &gt; 0, Format(Fields!AccumulatedLastYear.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_AccCurr"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!AccumulatedCurrentYear.Value &gt; 0, Format(Fields!AccumulatedCurrentYear.Value, "#,##0"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_Achieve"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!RatioAchieved.Value &gt; 0, Format(Fields!RatioAchieved.Value, "0.00%"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="D_Growth"><Paragraphs><Paragraph><TextRuns><TextRun><Value>=IIF(Fields!RatioGrowth.Value &lt;&gt; 0, Format(Fields!RatioGrowth.Value, "0.00%"), "")</Value><Style><FontFamily>Times New Roman</FontFamily></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Color>#E0E0E0</Color><Style>Solid</Style></Border><VerticalAlign>Middle</VerticalAlign><PaddingRight>2pt</PaddingRight></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember /><TablixMember /><TablixMember /><TablixMember />
+            <TablixMember /><TablixMember /><TablixMember /><TablixMember />
+            <TablixMember /><TablixMember /><TablixMember /><TablixMember />
+            <TablixMember /><TablixMember /><TablixMember /><TablixMember />
+            <TablixMember /><TablixMember /><TablixMember /><TablixMember />
+            <TablixMember /><TablixMember /><TablixMember /><TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="GroupNameGroup">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!GroupName.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!GroupOrder.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Data_SanLuongDien</DataSetName>
+        <Top>0.9in</Top>
+        <Left>0.2in</Left>
+        <Height>0.9in</Height>
+        <Width>23.8in</Width>
+        <Style>
+          <Border><Style>Solid</Style><Color>#CCCCCC</Color></Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>2.0in</Height>
+  </Body>
+  <Width>24.5in</Width>
+  <Page>
+    <PageHeight>8.5in</PageHeight>
+    <PageWidth>25.0in</PageWidth>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <TopMargin>0.5in</TopMargin>
+    <BottomMargin>0.5in</BottomMargin>
+    <Style />
+  </Page>
+  <DataSources>
+    <DataSource Name="Data_SanLuongDien">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>b4d7ca40-de47-43e9-a1a4-448e772acc6e</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Data_SanLuongDien">
+      <Query>
+        <DataSourceName>Data_SanLuongDien</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="GroupType"><DataField>GroupType</DataField><rd:TypeName>System.String</rd:TypeName></Field>
+        <Field Name="GroupName"><DataField>GroupName</DataField><rd:TypeName>System.String</rd:TypeName></Field>
+        <Field Name="GroupOrder"><DataField>GroupOrder</DataField><rd:TypeName>System.Int32</rd:TypeName></Field>
+        <Field Name="STT"><DataField>STT</DataField><rd:TypeName>System.Int32</rd:TypeName></Field>
+        <Field Name="PlantName"><DataField>PlantName</DataField><rd:TypeName>System.String</rd:TypeName></Field>
+        <Field Name="CompanyName"><DataField>CompanyName</DataField><rd:TypeName>System.String</rd:TypeName></Field>
+        <Field Name="Address"><DataField>Address</DataField><rd:TypeName>System.String</rd:TypeName></Field>
+        <Field Name="CapacityMWp"><DataField>CapacityMWp</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="CapacityMW"><DataField>CapacityMW</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="ReportYear"><DataField>ReportYear</DataField><rd:TypeName>System.Int32</rd:TypeName></Field>
+        <Field Name="PlanYear"><DataField>PlanYear</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month1"><DataField>Month1</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month2"><DataField>Month2</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month3"><DataField>Month3</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month4"><DataField>Month4</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month5"><DataField>Month5</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month6"><DataField>Month6</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month7"><DataField>Month7</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month8"><DataField>Month8</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month9"><DataField>Month9</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month10"><DataField>Month10</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month11"><DataField>Month11</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Month12"><DataField>Month12</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Quarter1"><DataField>Quarter1</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Quarter2"><DataField>Quarter2</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Quarter3"><DataField>Quarter3</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="Quarter4"><DataField>Quarter4</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="TotalYear"><DataField>TotalYear</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="AccumulatedCurrentYear"><DataField>AccumulatedCurrentYear</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="AccumulatedLastYear"><DataField>AccumulatedLastYear</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="RatioAchieved"><DataField>RatioAchieved</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+        <Field Name="RatioGrowth"><DataField>RatioGrowth</DataField><rd:TypeName>System.Decimal</rd:TypeName></Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="p_ReportYear">
+      <DataType>String</DataType>
+      <Prompt>ReportYear</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="p_PeriodMonth">
+      <DataType>String</DataType>
+      <Prompt>PeriodMonth</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>8a45b732-2258-4521-a3f2-bc108876c112</rd:ReportID>
+</Report>

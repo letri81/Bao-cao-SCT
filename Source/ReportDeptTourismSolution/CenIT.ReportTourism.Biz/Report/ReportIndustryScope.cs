@@ -65,14 +65,46 @@ namespace CenIT.ReportTourism.Biz.Report
             if (!Allows(enterpriseId)) throw new HttpException(403, "Enterprise industry is outside your report permissions.");
         }
 
+        private static readonly HashSet<string> ScopedProcedures = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "Report_Reports_01_UocKetQuaHoatDongKinhDoanh",
+            "Report_Reports_02_ThongKeQuocTichKhachDuLich",
+            "Report_Reports_03_DoanhNghiepChuaGuiBaoCao",
+            "Report_Reports_04_BaoCaoHoatDongDoanhNghiep",
+            "Report_DataImports_Get",
+            "Report_DataImports_GetDataImport",
+            "Report_DataImports_GetForUserOnMonth",
+            "Report_DataImports_GetViaEnterpriseOnMonth",
+            "Report_DataImports_GenerateSaleOfTourism",
+            "Report_Dashboard_StatisticEnterprise",
+            "Report_Dashboard_StatisticTypeBusiness",
+            "Report_Dashboard_StatisticVisitor",
+            "Report_Dashboard_StatisticMapVisitor",
+            "Report_Dashboard_StatisticIncome",
+            "Report_Dashboard_IndustrialSnapshot",
+            "Report_Dashboard_FilterOptions",
+            "Report_Dashboard_ProgressDetails",
+            "Report_Dashboard_OverviewSummary"
+        };
+
+        public static bool IsScoped(string name)
+        {
+            return Current != null && !string.IsNullOrEmpty(name) && ScopedProcedures.Contains(name);
+        }
+
         public static string Procedure(string name)
         {
-            return Current == null ? name : name + "_IndustryScope";
+            return IsScoped(name) ? name + "_IndustryScope" : name;
         }
 
         public static object[] Parameters(params object[] values)
         {
             return Current == null ? values : values.Concat(new object[] { Current.UserName }).ToArray();
+        }
+
+        public static object[] ParametersFor(string name, params object[] values)
+        {
+            return IsScoped(name) ? (values ?? new object[0]).Concat(new object[] { Current.UserName }).ToArray() : values;
         }
     }
 }
