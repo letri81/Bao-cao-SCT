@@ -64,11 +64,11 @@ namespace CenIT.ReportTourism.Models.Cate
         public bool IsPowerIndustry { get; set; } // true: thuộc ngành điện
 
         /// công suất tấm pin (ngành điện)
-        [CustomDisplayName("Enterprise_Industry")]
+        [CustomDisplayName("Enterprise_CapacityMWp")]
         public decimal? CapacityMWp { get; set; }
 
         /// công suất bộ chuyển đổi (ngành điện)
-        [CustomDisplayName("Enterprise_Industry")]
+        [CustomDisplayName("Enterprise_CapacityMW")]
         public decimal? CapacityMW { get; set; }
 
         //public string MainIndustryCode { get; set; }
