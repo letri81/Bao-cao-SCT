@@ -1,39 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Provider xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-     <StoredProcedures ProviderName="ReportTourismProvider">
-
-          <Procedure Name="Report_DataImports_ImportDatas" Value="p_Report_DataImports_ImportDatas" />
-          <Procedure Name="Report_DataImports_Get" Value="p_Report_DataImports_Get" />
-          <Procedure Name="Report_DataImports_GetDataImport" Value="p_Report_DataImports_GetDataImport" />
-          <Procedure Name="Report_DataImports_Delete" Value="p_Report_DataImports_Delete" />
-          <Procedure Name="Report_DataImports_GetForUserOnMonth" Value="p_Report_DataImports_GetForUserOnMonth" />
-          <Procedure Name="Report_DataImports_GetViaEnterpriseOnMonth" Value="p_Report_DataImports_GetViaEnterpriseOnMonth" />
-          <Procedure Name="Report_DataImports_GenerateSaleOfTourism" Value="p_Report_DataImports_GenerateSaleOfTourism" />
-          <Procedure Name="Report_DataImports_CheckDataImport" Value="p_Report_DataImports_CheckDataImport" />
-
-          <Procedure Name="Report_ThongKe_BaoCaoTrongThang" Value="p_Report_ThongKe_BaoCaoTrongThang" />
-          <Procedure Name="Report_ThongKe_BaoCaoTre" Value="p_Report_ThongKe_BaoCaoTre" />
-          <Procedure Name="Report_ThongKe_BaoCaoChuaNop" Value="p_Report_ThongKe_BaoCaoChuaNop" />
-          <Procedure Name="Report_ThongKe_BaoCaoDoanhNghiep" Value="p_Report_ThongKe_BaoCaoDoanhNghiep" />
-
-          <Procedure Name="Report_DataImports_Get" Value="p_Report_DataImports_Get" />
-
-          <Procedure Name="Report_Reports_01_UocKetQuaHoatDongKinhDoanh"
-                     Value="p_Report_Reports_01_UocKetQuaHoatDongKinhDoanh" />
-          <Procedure Name="Report_Reports_02_ThongKeQuocTichKhachDuLich"
-                     Value="p_Report_Reports_02_ThongKeQuocTichKhachDuLich" />
-          <Procedure Name="Report_Reports_03_DoanhNghiepChuaGuiBaoCao"
-                     Value="p_Report_Reports_03_DoanhNghiepChuaGuiBaoCao" />
-          <Procedure Name="Report_Reports_04_BaoCaoHoatDongDoanhNghiep"
-                     Value="p_Report_Reports_04_BaoCaoHoatDongDoanhNghiep" />
-          
-          <Procedure Name="usp_Report_KTXH_TheoEnterprise" Value="usp_Report_KTXH_TheoEnterprise" />
-          <Procedure Name="usp_Report_HoatDongXuatKhau_TheoEnterprise" Value="usp_Report_HoatDongXuatKhau_TheoEnterprise" />
-          <Procedure Name="usp_Report_KTXH_Tong" Value="usp_Report_KTXH_Tong" />
-          <Procedure Name="usp_Report_KTXH_Type2_TheoEnterprise" Value="usp_Report_KTXH_Type2_TheoEnterprise" />
-          <Procedure Name="usp_Report_KTXH_Type2_Tong" Value="usp_Report_KTXH_Type2_Tong" />
-
+  <StoredProcedures ProviderName="ReportTourismProvider">
+    <Procedure Name="Report_DataImports_ImportDatas" Value="p_Report_DataImports_ImportDatas" />
+    <Procedure Name="Report_DataImports_Get" Value="p_Report_DataImports_Get" />
+    <Procedure Name="Report_DataImports_GetDataImport" Value="p_Report_DataImports_GetDataImport" />
+    <Procedure Name="Report_DataImports_Delete" Value="p_Report_DataImports_Delete" />
+    <Procedure Name="Report_DataImports_GetForUserOnMonth" Value="p_Report_DataImports_GetForUserOnMonth" />
+    <Procedure Name="Report_DataImports_GetViaEnterpriseOnMonth" Value="p_Report_DataImports_GetViaEnterpriseOnMonth" />
+    <Procedure Name="Report_DataImports_GenerateSaleOfTourism" Value="p_Report_DataImports_GenerateSaleOfTourism" />
+    <Procedure Name="Report_DataImports_CheckDataImport" Value="p_Report_DataImports_CheckDataImport" />
+    <Procedure Name="Report_ThongKe_BaoCaoTrongThang" Value="p_Report_ThongKe_BaoCaoTrongThang" />
+    <Procedure Name="Report_ThongKe_BaoCaoTre" Value="p_Report_ThongKe_BaoCaoTre" />
+    <Procedure Name="Report_ThongKe_BaoCaoChuaNop" Value="p_Report_ThongKe_BaoCaoChuaNop" />
+    <Procedure Name="Report_ThongKe_BaoCaoDoanhNghiep" Value="p_Report_ThongKe_BaoCaoDoanhNghiep" />
+    <Procedure Name="Report_DataImports_Get" Value="p_Report_DataImports_Get" />
+    <Procedure Name="Report_Reports_01_UocKetQuaHoatDongKinhDoanh" Value="p_Report_Reports_01_UocKetQuaHoatDongKinhDoanh" />
+    <Procedure Name="Report_Reports_02_ThongKeQuocTichKhachDuLich" Value="p_Report_Reports_02_ThongKeQuocTichKhachDuLich" />
+    <Procedure Name="Report_Reports_03_DoanhNghiepChuaGuiBaoCao" Value="p_Report_Reports_03_DoanhNghiepChuaGuiBaoCao" />
+    <Procedure Name="Report_Reports_04_BaoCaoHoatDongDoanhNghiep" Value="p_Report_Reports_04_BaoCaoHoatDongDoanhNghiep" />
+    <Procedure Name="usp_Report_KTXH_TheoEnterprise" Value="usp_Report_KTXH_TheoEnterprise" />
+    <Procedure Name="usp_Report_HoatDongXuatKhau_TheoEnterprise" Value="usp_Report_HoatDongXuatKhau_TheoEnterprise" />
+    <Procedure Name="usp_Report_KTXH_Tong" Value="usp_Report_KTXH_Tong" />
+    <Procedure Name="usp_Report_KTXH_Type2_TheoEnterprise" Value="usp_Report_KTXH_Type2_TheoEnterprise" />
+    <Procedure Name="usp_Report_KTXH_Type2_Tong" Value="usp_Report_KTXH_Type2_Tong" />
+    <Procedure Name="usp_Report_SanLuongDien" Value="usp_Report_SanLuongDien" />
+    <Procedure Name="dbo.usp_Report_SanLuongDien" Value="usp_Report_SanLuongDien" />
+    <Procedure Name="usp_Report_TheoDoiSanLuongDien" Value="usp_Report_TheoDoiSanLuongDien" />
+    <Procedure Name="dbo.usp_Report_TheoDoiSanLuongDien" Value="usp_Report_TheoDoiSanLuongDien" />
+    <Procedure Name="sp_Job_SyncPowerProductionMonthly" Value="sp_Job_SyncPowerProductionMonthly" />
     <Procedure Name="Report_Dashboard_StatisticEnterprise" Value="p_Report_Dashboard_StatisticEnterprise" />
     <Procedure Name="Report_Dashboard_StatisticTypeBusiness" Value="p_Report_Dashboard_StatisticTypeBusiness" />
     <Procedure Name="Report_Dashboard_StatisticVisitor" Value="p_Report_Dashboard_StatisticVisitor" />
@@ -43,21 +37,17 @@
     <Procedure Name="Report_Dashboard_FilterOptions" Value="p_Report_Dashboard_FilterOptions" />
     <Procedure Name="Report_Dashboard_ProgressDetails" Value="p_Report_Dashboard_ProgressDetails" />
     <Procedure Name="Report_Dashboard_OverviewSummary" Value="p_Report_Dashboard_OverviewSummary" />
-
-          <Procedure Name="Report_ExtendInfos_Get" Value="p_Report_ExtendInfos_Get" />
-          <Procedure Name="Report_ExtendInfos_Save" Value="p_Report_ExtendInfos_Save" />
-          <Procedure Name="Report_ExtendInfos_GetByID" Value="p_Report_ExtendInfos_GetByID" />
-          <Procedure Name="Report_ExtendInfos_GetViaMonth" Value="p_Report_ExtendInfos_GetViaMonth" />
-
+    <Procedure Name="Report_ExtendInfos_Get" Value="p_Report_ExtendInfos_Get" />
+    <Procedure Name="Report_ExtendInfos_Save" Value="p_Report_ExtendInfos_Save" />
+    <Procedure Name="Report_ExtendInfos_GetByID" Value="p_Report_ExtendInfos_GetByID" />
+    <Procedure Name="Report_ExtendInfos_GetViaMonth" Value="p_Report_ExtendInfos_GetViaMonth" />
     <Procedure Name="Report_Chatbot_IndicatorData" Value="p_Report_Chatbot_IndicatorData" />
     <Procedure Name="Report_Chatbot_ReportFiles" Value="p_Report_Chatbot_ReportFiles" />
     <Procedure Name="Report_Chatbot_Metadata" Value="p_Report_Chatbot_Metadata" />
-
     <Procedure Name="Report_Chatbot_Snapshot" Value="p_Report_Chatbot_Snapshot" />
     <Procedure Name="Report_Chatbot_Summary" Value="p_Report_Chatbot_Summary" />
     <Procedure Name="Report_Chatbot_FilterOptions" Value="p_Report_Chatbot_FilterOptions" />
     <Procedure Name="Report_Chatbot_ProgressDetails" Value="p_Report_Chatbot_ProgressDetails" />
-
     <!-- Reports-only industry scope; original procedures remain available to other modules. -->
     <Procedure Name="Report_IndustryPermissions_Scope" Value="p_Report_IndustryPermissions_Scope" />
     <Procedure Name="Report_IndustryPermissions_Enterprises" Value="p_Report_IndustryPermissions_Enterprises" />
@@ -80,8 +70,6 @@
     <Procedure Name="Report_Dashboard_FilterOptions_IndustryScope" Value="p_Report_Dashboard_FilterOptions_IndustryScope" />
     <Procedure Name="Report_Dashboard_ProgressDetails_IndustryScope" Value="p_Report_Dashboard_ProgressDetails_IndustryScope" />
     <Procedure Name="Report_Dashboard_OverviewSummary_IndustryScope" Value="p_Report_Dashboard_OverviewSummary_IndustryScope" />
-  </StoredProcedures>
-
     <Procedure Name="Report_DataImports_OperationalScope" Value="p_Report_DataImports_OperationalScope" />
     <Procedure Name="Report_DataImports_Get_Operational" Value="p_Report_DataImports_Get_Operational" />
     <Procedure Name="Report_DataImports_GetDataImport_Operational" Value="p_Report_DataImports_GetDataImport_Operational" />
@@ -89,4 +77,7 @@
     <Procedure Name="Report_DataImports_GetForUserOnMonth_Operational" Value="p_Report_DataImports_GetForUserOnMonth_Operational" />
     <Procedure Name="Report_DataImports_Enterprises_SearchSelect2" Value="p_Report_DataImports_Enterprises_SearchSelect2" />
     <Procedure Name="Report_DataImports_CheckOwnership" Value="p_Report_DataImports_CheckOwnership" />
+    <Procedure Name="usp_Report_SanLuongDien_Chung" Value="usp_Report_SanLuongDien_Chung" />
+    <Procedure Name="dbo.usp_Report_SanLuongDien_Chung" Value="usp_Report_SanLuongDien_Chung" />
+  </StoredProcedures>
 </Provider>

@@ -70,11 +70,27 @@ namespace CenIT.ReportTourism.Modules.ReportModule.Areas.Report.Controllers
             }
             var sReportKey = Request.Form["ReportKey"];
             ViewBag.Title = Request.Form["ReportName"];
+            ViewBag.ReportKey = sReportKey;
+            ViewBag.ReportYear = Request.Form["ReportYear"] ?? System.DateTime.Now.Year.ToString();
+            ViewBag.PeriodMonth = Request.Form["PeriodMonth"] ?? "9";
+            ViewBag.OnMonth = Request.Form["OnMonth"] ?? System.DateTime.Now.ToString("MM/yyyy");
 
             ViewBag.ReportViewer =
                 ReportProvider.CreateViewExport(sReportKey, Request.Form,
                     Server.MapPath("~/Contents/Modules/Report/Templates/"));
             return await Task.Run(() => PartialView("_Viewer"));
+        }
+
+        [ActionType(Type = EnumActionType.View)]
+        public void ExportReport(string reportKey, string reportYear = "", string periodMonth = "", string onMonth = "")
+        {
+            var form = new System.Collections.Specialized.NameValueCollection(Request.QueryString);
+            if (!string.IsNullOrEmpty(reportYear)) form["ReportYear"] = reportYear;
+            if (!string.IsNullOrEmpty(periodMonth)) form["PeriodMonth"] = periodMonth;
+            if (!string.IsNullOrEmpty(onMonth)) form["OnMonth"] = onMonth;
+            if (string.IsNullOrEmpty(form["ReportKey"])) form["ReportKey"] = reportKey;
+
+            ReportProvider.Export(reportKey, form, Response, Server.MapPath("~/Contents/Modules/Report/Templates/"));
         }
 
         [AjaxOnly]
