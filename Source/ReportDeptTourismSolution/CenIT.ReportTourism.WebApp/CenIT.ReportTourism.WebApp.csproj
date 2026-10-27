@@ -274,28 +274,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Data_HoatDong_XuatKhauHangHoa.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Contents\Modules\Report\Templates\Data_Report_Enterprise.Designer.cs" />
-    <Compile Include="Contents\Modules\Report\Templates\Data_Report_Import.Designer.cs" />
+    <Compile Include="Contents\Modules\Report\Templates\Data_Report_Enterprise.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data_Report_Enterprise.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\Modules\Report\Templates\Data_Report_Import.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data_Report_Import.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Contents\Modules\Report\Templates\Data_TinhHinhHoatDong_SXKD.cs">
       <DependentUpon>Data_TinhHinhHoatDong_SXKD.xsd</DependentUpon>
     </Compile>
     <Compile Include="Contents\Modules\Report\Templates\Data_TinhHinhHoatDong_SXKD.Designer.cs">
       <DependentUpon>Data_TinhHinhHoatDong_SXKD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contents\Modules\Report\Templates\Data_TinhHinhHoatDong_TMDV.Designer.cs" />
+    <Compile Include="Contents\Modules\Report\Templates\Data_TinhHinhHoatDong_TMDV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data_TinhHinhHoatDong_TMDV.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Contents\Modules\Report\Templates\_01UocKetQuaHoatDongKinhDoanh.cs">
       <DependentUpon>_01UocKetQuaHoatDongKinhDoanh.xsd</DependentUpon>
     </Compile>
     <Compile Include="Contents\Modules\Report\Templates\_01UocKetQuaHoatDongKinhDoanh.Designer.cs">
-      <DependentUpon>_01UocKetQuaHoatDongKinhDoanh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Contents\Modules\Report\Templates\_01UocKetQuaHoatDongKinhDoanh1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_01UocKetQuaHoatDongKinhDoanh.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Contents\Modules\Report\Templates\_02ThongKeQuocTichKhachDuLich.Designer.cs" />
-    <Compile Include="Contents\Modules\Report\Templates\_02ThongKeQuocTichKhachDuLich1.Designer.cs">
+    <Compile Include="Contents\Modules\Report\Templates\_02ThongKeQuocTichKhachDuLich.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_02ThongKeQuocTichKhachDuLich.xsd</DependentUpon>
@@ -1755,7 +1763,7 @@
     </Content>
     <None Include="Contents\Modules\Report\Templates\Data_Report_Enterprise.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Data_Report_Enterprise1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Data_Report_Enterprise.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <Content Include="Contents\Modules\Report\Templates\Data_Report_Enterprise.xss">
@@ -1766,7 +1774,7 @@
     </Content>
     <None Include="Contents\Modules\Report\Templates\Data_Report_Import.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Data_Report_Import1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Data_Report_Import.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <Content Include="Contents\Modules\Report\Templates\Data_Report_Import.xss">
@@ -1777,7 +1785,7 @@
     </Content>
     <None Include="Contents\Modules\Report\Templates\Data_TinhHinhHoatDong_SXKD.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Data_TinhHinhHoatDong_SXKD1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Data_TinhHinhHoatDong_SXKD.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <Content Include="Contents\Modules\Report\Templates\Data_TinhHinhHoatDong_SXKD.xss">
@@ -1788,7 +1796,7 @@
     </Content>
     <None Include="Contents\Modules\Report\Templates\Data_TinhHinhHoatDong_TMDV.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Data_TinhHinhHoatDong_TMDV1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Data_TinhHinhHoatDong_TMDV.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <Content Include="Contents\Modules\Report\Templates\Data_TinhHinhHoatDong_TMDV.xss">
@@ -1800,7 +1808,7 @@
     <Content Include="Contents\Modules\Report\Templates\Template_LuuTru.xlsx" />
     <None Include="Contents\Modules\Report\Templates\_01UocKetQuaHoatDongKinhDoanh.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_01UocKetQuaHoatDongKinhDoanh1.Designer.cs</LastGenOutput>
+      <LastGenOutput>_01UocKetQuaHoatDongKinhDoanh.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <Content Include="Contents\Modules\Report\Templates\_01UocKetQuaHoatDongKinhDoanh.xss">
@@ -1808,7 +1816,7 @@
     </Content>
     <None Include="Contents\Modules\Report\Templates\_02ThongKeQuocTichKhachDuLich.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_02ThongKeQuocTichKhachDuLich1.Designer.cs</LastGenOutput>
+      <LastGenOutput>_02ThongKeQuocTichKhachDuLich.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <Content Include="Contents\Modules\Report\Templates\_02ThongKeQuocTichKhachDuLich.xss">
@@ -1822,6 +1830,8 @@
     <Content Include="Contents\Modules\Report\Templates\_04TongHop_ThuongMaiDichVu.rdlc" />
     <Content Include="Contents\Modules\Report\Templates\_TemplateImportReport.rdlc" />
     <Content Include="Contents\Modules\Sys\plugins\bootstrap-multiselect\less\bootstrap-multiselect.less" />
+    <Content Include="Contents\Modules\Report\Templates\_03BaoCao_SanLuongDien.rdlc" />
+    <Content Include="Contents\Modules\Report\Templates\_03BaoCao_SanLuongDien_Chung.rdlc" />
     <None Include="Contents\plugins\validate\jquery.validate-vsdoc.js" />
     <Content Include="Contents\plugins\validate\jquery.validate.js" />
     <Content Include="Contents\plugins\validate\jquery.validate.min.js" />

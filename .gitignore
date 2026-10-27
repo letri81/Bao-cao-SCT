@@ -115,3 +115,7 @@ Source/ReportDeptTourismSolution/CenIT.ReportTourism.WebApp/Contents/Modules/Rep
 Source/ReportDeptTourismSolution/CenIT.ReportTourism.WebApp/Contents/Modules/Report/Reports/CenIT.ReportTourism.Reports.UocKetQuaHoatDongKinhDoanh.dll
 Source/ReportDeptTourismSolution/CenIT.ReportTourism.WebApp/Libraries/Authorities/Plugable.SQLProcedureAuthority.dll
 Source/ReportDeptTourismSolution/CenIT.ReportTourism.WebApp/Libraries/Procedurors/Plugable.SQLStoreProcedure.dll
+Source/ReportDeptTourismSolution/CenIT.ReportTourism.WebApp/Contents/Modules/Report/Reports/CenIT.ReportTourism.Reports.ThongKeQuocTichKhachDuLich.dll
+Source/ReportDeptTourismSolution/CenIT.ReportTourism.WebApp/Contents/Modules/Report/Reports/CenIT.ReportTourism.Reports.UocKetQuaHoatDongKinhDoanh.dll
+Source/ReportDeptTourismSolution/CenIT.ReportTourism.WebApp/Libraries/Authorities/Plugable.SQLProcedureAuthority.dll
+Source/ReportDeptTourismSolution/CenIT.ReportTourism.WebApp/Libraries/Procedurors/Plugable.SQLStoreProcedure.dll
